@@ -15,6 +15,9 @@ This project contains a data analysis pipeline and two neural network models to 
 * Class Imbalance Fix: Handled the skewed 90/10 data distribution by applying class weights to ensure the minority class is heavily factored into the loss calculation.
 * Checkpoints: Implemented a model checkpoint callback to track validation accuracy across training rounds and automatically save the highest-performing weight matrix.
 
+## Dataset
+The model was trained on the [Social Media Engagement Dataset](https://www.kaggle.com/datasets/7345511/11702629), which contains structured records of content metadata, text-based emotional metrics, and account engagement history.
+
 ## Setup
 Install dependencies using:
 pip install pandas numpy scikit-learn tensorflow matplotlib
