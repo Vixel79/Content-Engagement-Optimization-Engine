@@ -18,3 +18,16 @@ This project contains a data analysis pipeline and two neural network models to 
 ## Setup
 Install dependencies using:
 pip install pandas numpy scikit-learn tensorflow matplotlib
+
+## Usage
+Once the notebook runs and generates the saved weights, the optimized model can be loaded and deployed directly in production scripts using the following structure:
+
+```python
+from tensorflow.keras.models import load_model
+
+# Load the trained model weights
+model = load_model('best_viral_model.keras')
+
+# Pass new pre-publishing feature vectors to predict virality
+# Features: [sentiment_score, toxicity_score, user_past_sentiment_avg, user_engagement_growth, buzz_change_rate]
+predictions = model.predict(new_data)
